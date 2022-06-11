@@ -24,7 +24,7 @@ var MessagesView = {
     for ( var x = 0; x < data.length; x++) {
       var message = data[x];
       if (message.text) {
-        if (!message.text.includes('<' || '>')) {
+        if (!message.text.includes('<' || '>' || 'null')) {
           MessagesView.renderMessage(data[x]);
         }
       }

@@ -19,7 +19,7 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
     var update = function() {
-      setInterval(App.fetch, 5000);
+      setInterval(App.fetch, 10000);
 
       console.log('updated');
     };
@@ -60,7 +60,7 @@ var App = {
 
 
       rooms = [];
-      rooms.push('none selected');
+      rooms.push('lobby');
       for (var x = 0; x < data.length; x++) { // iterate through each message
         var message = data[x];
         // if the roomname property exists and is not already in the rooms array
